@@ -1,0 +1,41 @@
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "username": "marvi",
+    "password": "Bism123"
+}
+
+###
+GET http://localhost:5000/api/posts/3,4,5,10
+x-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNjU4MzMzMzg4fQ.-qcQryhpa8KePlIJ7gzBU05E15IVyKWVh_NG6hNRbC0
+
+###
+PATCH http://localhost:5000/api/posts/10
+x-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNjU4MzMzMzg4fQ.-qcQryhpa8KePlIJ7gzBU05E15IVyKWVh_NG6hNRbC0
+Content-Type: application/json
+
+{
+  "authorIds": [6,4],
+  "tags": ["science", "tech"],
+  "text": "Your route implementation should include error handling."
+}
+
+###
+POST http://localhost:5000/api/posts
+x-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNjU3OTAwMTIwfQ.G6R-fgeluUNtF2ttixIk0ofzdU0sFkSU_aKC5ktbx_U
+Content-Type: application/json
+
+{
+    "text": "we are good beings",
+    "tags": ["science", "human"]
+}
+
+###
+PATCH http://localhost:3000/subscribers/62b7ce991b8d0a4da0e5252a
+Content-Type: application/json
+
+{
+    "subscribedToChannel": "Data Scientist at Meta inshaAllah!"
+}
